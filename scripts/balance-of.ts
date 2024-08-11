@@ -45,7 +45,7 @@ async function main() {
 
   const wallet = new ethers.Wallet('0x' + process.env.PRIVATE_KEY, signer.provider)
 
-  const contractFactory = await ethers.getContractFactory('PrivateNFT')
+  const contractFactory = await ethers.getContractFactory('PrivateNFTMint')
   const contract = contractFactory.attach(contractAddress)
 
   const functionName = 'balanceOf'

@@ -6,7 +6,7 @@ async function main() {
   const [signer] = await ethers.getSigners()
   const initalOwner = signer.address
 
-  const Contract = await ethers.getContractFactory('PrivateNFT')
+  const Contract = await ethers.getContractFactory('PrivateNFTMint')
 
   console.log('Deploying NFT...')
   const contract = await Contract.deploy(initalOwner)
